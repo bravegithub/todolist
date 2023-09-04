@@ -74,7 +74,7 @@ export default function Profil() {
       </h1>
       <div className="profil relative flex justify-center items-center">
         <div className="profil-image rounded-full border-4 boder-white  h-[100px] w-[100px] overflow-hidden">
-          {imageUrl && <img src={imageUrl} alt="Profile Picture" className="w-full h-full" />}
+          {imageUrl && <img src={imageUrl} alt="Profile Picture" className="w-full h-full"/>}
         </div>
         <input
           type="file"

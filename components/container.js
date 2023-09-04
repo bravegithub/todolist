@@ -50,7 +50,7 @@ export default function Container(props) {
             <div className="threads relative mt-2 h-[400px] space-y-3  rounded-md overflow-auto">
                 <Loading isLoading = {isLoading}  />
                 {
-                    val.map(t => <Thread  removeThread = {removeThread}  title = {t.description} id = {t.idThread} date = {t.date} openEdit = {props.openEdit}  />)
+                    val.map(t => <Thread key = {t.idThread}  removeThread = {removeThread}  title = {t.description} id = {t.idThread} date = {t.date} openEdit = {props.openEdit}  />)
                 }
             </div>
         </div>

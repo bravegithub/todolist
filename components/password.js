@@ -26,7 +26,7 @@ export default function CreateAccount(props) {
   return (
     <div>
       <div className='illustrator w-full h-[50%]  flex justify-center overflow-hidden '>
-                 <img src={loginIllustrator.src} className='w-[75%] h-full rounded-md ' />
+                 <img src={loginIllustrator.src} className='w-[75%] h-full rounded-md ' alt='loginIllustrator'/>
             </div>
             <div className='login relative flex flex-col justify-center items-center space-y-2   bg-white rounded-md'>
             <Loading isLoading = {isLoading} />

@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react"
+import { useRef, useEffect, useState } from "react"
 
 export default function Thread(props) {
     let edit;
     
     function show() {
-       edit.classList.toggle('hidden') 
+        editRef.current.classList.toggle('hidden') 
     }
+    const editRef = useRef(null);
+
     useEffect(() => {
-        edit = document.querySelector(`#${props.id}`);
-   },[show])
+      editRef.current = document.querySelector(`#${props.id}`);
+    }, [props.id , show ]);
 
     return(
         <div className="thread w-full min-h-[70px] bg-white rounded-md p-2 space-y-1 relative">

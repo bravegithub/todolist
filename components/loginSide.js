@@ -50,7 +50,7 @@ export default function LoginSide(props) {
   return (
     <div>
       <div className='illustrator sm:w-full sm:h-[50%] flex justify-center '>
-        <img src={loginIllustrator.src} className='w-[90%] sm:w-[95%] h-full rounded-md ' />
+        <img src={loginIllustrator.src} className='w-[90%] sm:w-[95%] h-full rounded-md ' alt='loginIllustrator' />
       </div>
       <div className='login relative flex flex-col justify-center items-center space-y-2 bg-white rounded-md'>
         <Loading isLoading={isLoading} />
