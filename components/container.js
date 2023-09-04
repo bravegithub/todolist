@@ -20,13 +20,15 @@ export default function Container(props) {
                   username: props.username,
                 })
               })
-            setLoading(false)
+            
             const data=await threads.json();
-            setVal(data.results)    
+            
+            setVal(data.results) 
+            setLoading(false)   
         }
         getThreads()
         
-    },[val])
+    },[val , removeThread])
     
     async function removeThread(id) {
         setLoading(true)

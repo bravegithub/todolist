@@ -3,10 +3,10 @@ import mysql from "mysql2";
 import multer from "multer";
 
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "tododb",
+  host:'www.db4free.net',
+    user:'tododb',
+    password:'tododb123',
+    database:'tododb',
 });
 
 const upload = multer({ dest: "uploads/" });

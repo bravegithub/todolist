@@ -8,6 +8,7 @@ export default function CreateAccount(props) {
   const [userNameTaken , setUserName] = useState(false)
 
     const handleCreate = async () => {
+      setLoading(true)
       const response = await fetch('/api/userCheck', {
         method:'PUT',
         headers: {
@@ -20,10 +21,10 @@ export default function CreateAccount(props) {
         const data = await response.json()
         if(data.results.length != 0) {
           setUserName(true)
+          setLoading(false)
         }
         else{
           setUserName(false)
-        setLoading(true)
         if(details.idUser != null && details.username != null && details.password != null){
         const response = await fetch('/api/createaccount', {
                 method:'PUT',

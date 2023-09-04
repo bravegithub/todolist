@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
 
 const pool = mysql.createPool({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'tododb',
+    host:'www.db4free.net',
+    user:'tododb',
+    password:'tododb123',
+    database:'tododb',
 });
 
 export default async function handler(req, res) {
